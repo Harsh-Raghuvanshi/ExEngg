@@ -28,8 +28,10 @@ const Itemcard = (props) => {
       );
     }
   };
-
-  let temp = `http://localhost:5000/getimage/${props.filename}`;
+  // let port=process.env.PORT;
+  const port=process.env.REACT_APP_BACKEND_PORT;
+  let temp = `http://localhost:${port}/getimage/${props.filename}`;
+  console.log(temp);
   return (
     <>
       <div className="col m-0">
